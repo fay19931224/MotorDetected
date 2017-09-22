@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Sensors">
+      <UniqueIdentifier>{051519cd-c0c5-4d38-8130-68955554531e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sensors">
+      <UniqueIdentifier>{15a6236a-3b8b-4073-93bd-354f60b42e0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Classifiers">
+      <UniqueIdentifier>{f295c7ba-93fb-4acc-812f-3edeee35f4ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classifiers">
+      <UniqueIdentifier>{23ec5050-91a9-4d89-9b7e-10e22d1a05b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tracker">
+      <UniqueIdentifier>{19fb2886-73f3-46b6-9a23-e5896585fa40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tracker">
+      <UniqueIdentifier>{bb01d291-678d-49e3-8320-306538c9025a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mode">
+      <UniqueIdentifier>{80261812-609a-414f-9646-a7895ba90e28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mode">
+      <UniqueIdentifier>{5ad404d7-9280-442a-8f9c-3577652ad145}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Connection_information.cpp">
+      <Filter>Source Files\Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="DataReader.cpp">
+      <Filter>Source Files\Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="SvmClassifier.cpp">
+      <Filter>Source Files\Classifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="Classifier.cpp">
+      <Filter>Source Files\Classifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="fhog.cpp">
+      <Filter>Source Files\Tracker</Filter>
+    </ClCompile>
+    <ClCompile Include="kcftracker.cpp">
+      <Filter>Source Files\Tracker</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjManager.cpp">
+      <Filter>Source Files\Tracker</Filter>
+    </ClCompile>
+    <ClCompile Include="FusionManager.cpp">
+      <Filter>Source Files\Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="Mode.cpp">
+      <Filter>Source Files\Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="OfflineMode.cpp">
+      <Filter>Source Files\Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="OnlineMode.cpp">
+      <Filter>Source Files\Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="RecordMode.cpp">
+      <Filter>Source Files\Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassifierTestingMode.cpp">
+      <Filter>Source Files\Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoReader.cpp">
+      <Filter>Source Files\Sensors</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Connection_information.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="DataReader.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="SvmClassifier.h">
+      <Filter>Header Files\Classifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="Classifier.h">
+      <Filter>Header Files\Classifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimalSVM.h">
+      <Filter>Header Files\Classifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="ffttools.hpp">
+      <Filter>Header Files\Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="fhog.hpp">
+      <Filter>Header Files\Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="kcftracker.hpp">
+      <Filter>Header Files\Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="labdata.hpp">
+      <Filter>Header Files\Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjManager.h">
+      <Filter>Header Files\Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="recttools.hpp">
+      <Filter>Header Files\Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="tracker.h">
+      <Filter>Header Files\Tracker</Filter>
+    </ClInclude>
+    <ClInclude Include="FusionManager.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassifierType.h">
+      <Filter>Header Files\Classifiers</Filter>
+    </ClInclude>
+    <ClInclude Include="Mode.h">
+      <Filter>Header Files\Mode</Filter>
+    </ClInclude>
+    <ClInclude Include="OfflineMode.h">
+      <Filter>Header Files\Mode</Filter>
+    </ClInclude>
+    <ClInclude Include="OnlineMode.h">
+      <Filter>Header Files\Mode</Filter>
+    </ClInclude>
+    <ClInclude Include="RecordMode.h">
+      <Filter>Header Files\Mode</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassifierTestingMode.h">
+      <Filter>Header Files\Mode</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoReader.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
