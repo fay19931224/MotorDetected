@@ -22,9 +22,9 @@ OfflineMode::OfflineMode(string videoFileName, FusionType type, int currentModel
 	_videoFileName = videoFileName;	
 	
 
-	_classifierList.push_back(new SvmClassifier("Features\\motorbikeFeature.xml", ClassiferType::Motorbike, Scalar(0, 255, 0), Size(40, 64), 0.2));
+	_classifierList.push_back(new SvmClassifier("Features\\motorbikeFeature.xml", ClassiferType::Motorbike, Scalar(0, 0, 255), Size(40, 64), 0.2));
 	_classifierList.push_back(new SvmClassifier("Features\\motorrow_all.xml", ClassiferType::Motorbike, Scalar(0, 255, 0), Size(96, 104), 0.6));
-	_classifierList.push_back(new SvmClassifier("Features\\motorrow_upperv2.xml", ClassiferType::Motorbike, Scalar(0, 255, 0), Size(160, 104), 2));		
+	_classifierList.push_back(new SvmClassifier("Features\\motorrow_upperv2.xml", ClassiferType::Motorbike, Scalar(255, 0, 0), Size(160, 104), 2));
 	//_classifierList.push_back(new SvmClassifier("Features\\motorrow_all.xml", ClassiferType::Motorbike, Scalar(0, 255, 0), Size(96, 104), 0.6));		
 }
 
@@ -89,7 +89,7 @@ Rect OfflineMode::adjustROI(Mat frame, Rect roi)
 void OfflineMode::Detect(Mat &frame, Mat &grayFrame)
 {
 	_classifierList[2]->Classify(grayFrame, _posibleROI);
-	if (_classifierList[2]->Update(frame)==0)
+	if (_classifierList[2]->Update(frame) == 0)
 	{
 		_classifierList[2]->setRestROI();
 		vector<Rect> roi;
@@ -102,10 +102,10 @@ void OfflineMode::Detect(Mat &frame, Mat &grayFrame)
 				for (int j = 0; j < roi.size(); j++)
 				{
 					roi[j] = adjustROI(frame, roi[j]);
-					rectangle(frame, Rect(roi[j].x, roi[j].y, roi[j].width, roi[j].height), Scalar(0, 0, 255));
+					//rectangle(frame, Rect(roi[j].x, roi[j].y, roi[j].width, roi[j].height), Scalar(255, 255, 255));
 				}
 				_classifierList[1]->Classify(grayFrame, roi);
-				if (_classifierList[1]->Update(frame)==0)
+				if (_classifierList[1]->Update(frame) == 0)
 				{
 					_classifierList[0]->Classify(grayFrame, roi);
 					_classifierList[0]->Update(frame);
@@ -114,7 +114,7 @@ void OfflineMode::Detect(Mat &frame, Mat &grayFrame)
 		}
 		else
 		{
-			for (int k = 0; k < _classifierList.size()-1; k++)
+			for (int k = 0; k < _classifierList.size() - 1; k++)
 			{
 				_classifierList[k]->Classify(grayFrame);
 				_classifierList[k]->Update(frame);
@@ -152,21 +152,18 @@ void OfflineMode::Run()
 		Mat dest = grayFrame.clone();
 		equalizeHist(dest, dest);
 		
-
 		vector< Vec3f > circles;
 		if (_type == FusionType::CarLeftSide || _type == FusionType::CarRightSide || _type == FusionType::CarFront)
 		{
 			cv::blur(dest, dest, cv::Size(3, 3));
-			Canny(dest, dest, 10, 150,3,true);			
-			imshow("pre2", dest);
-			HoughCircles(dest, circles, CV_HOUGH_GRADIENT, 2, 50, 200, 60,20,50);
-			//_posibleROI.push_back(Rect(0, 0, frame.cols, frame.rows));
+			Canny(dest, dest, 10, 150,3,true);						
+			//imshow("gray", dest);
+			HoughCircles(dest, circles, CV_HOUGH_GRADIENT, 2, 50, 200, 60,20,50);			
 			for (int j = 0; j<circles.size(); j++)
 			{
 				Point center(cvRound(circles[j][0]), cvRound(circles[j][1]));
 				int radius = cvRound(circles[j][2]);
-				float area = 4*radius * radius;
-				circle(frame, center, radius, Scalar(0, 255, 0), 1, 8, 0);
+				float area = 4 * radius * radius;
 				int heightSt;
 				int height;
 				if (area < 100)continue;
@@ -175,39 +172,38 @@ void OfflineMode::Run()
 					heightSt = 0;
 					height = center.y + radius;
 					Rect roi(center.x - 8 * radius, heightSt, 16 * radius, height);
-					rectangle(frame,roi,Scalar(0,255,255),1,8,0);
+					circle(frame, center, radius, Scalar(255, 0, 0), 1, 8, 0);
 					roi = adjustROI(frame, roi);
 					_posibleROI.push_back(roi);
 				}
 				else if ((area >= 1600 && area< 4000) && (center.y <= frame.rows * 3 / 4 && center.y>frame.rows * 1 / 3))
 				{
 					heightSt = frame.rows*0.15;
-					height = center.y + radius-heightSt;
+					height = center.y + radius - heightSt;
 					Rect roi(center.x - 8 * radius, heightSt, 16 * radius, height);
-					rectangle(frame, roi, Scalar(0, 255, 255), 1, 8, 0);
+					circle(frame, center, radius, Scalar(255, 0, 0), 1, 8, 0);
 					roi = adjustROI(frame, roi);
 					_posibleROI.push_back(roi);
 				}
-				else if (area>=4000 && center.y>frame.rows*2/3)
+				else if (area >= 4000 && center.y>frame.rows * 2 / 3)
 				{
 					heightSt = 0;
 					height = center.y + radius;
 					Rect roi(center.x - 8 * radius, heightSt, 16 * radius, height);
-					rectangle(frame, roi, Scalar(0, 255, 255), 1, 8, 0);
+					circle(frame, center, radius, Scalar(255, 0, 0), 1, 8, 0);
 					roi = adjustROI(frame, roi);
 					_posibleROI.push_back(roi);
 				}
 			}
-		}
-		
-		Detect(frame, grayFrame);						
+		}		
+		Detect(frame, grayFrame);				
 		writer.write(frame);
+		//imshow("gray", grayFrame);
 		imshow(_videoFileName, frame);		
 		if (WaitKey())
 		{
 			break;
-		}
-		//waitKey(_waitKeySec);
+		}		
 	}
 	destroyAllWindows();	
 }

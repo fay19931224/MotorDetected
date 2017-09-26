@@ -24,8 +24,7 @@ SvmClassifier::~SvmClassifier()
 
 void SvmClassifier::Classify(Mat &frame)
 {
-	_descriptor.detectMultiScale(frame, _resultROI, THRESHOLD, CELL_SIZE);
-	
+	_descriptor.detectMultiScale(frame, _resultROI, THRESHOLD, CELL_SIZE);	
 }
 
 
@@ -36,10 +35,12 @@ void SvmClassifier::Classify(Mat &frame)
 */
 void SvmClassifier::Classify(Mat &frame, vector<Rect> &roiList)
 {
-	_resultROI.clear();
+	_resultROI.clear();	
+	refineROI(roiList);	
 	for (int i = 0; i < roiList.size(); i++)
 	{
-		if (roiList[i].width < WINDOW_SIZE.width || roiList[i].height < WINDOW_SIZE.height)//?
+		rectangle(frame, roiList[i], Scalar(255, 0, 255), 5, 8, 0);						
+		if (roiList[i].width < WINDOW_SIZE.width || roiList[i].height < WINDOW_SIZE.height)
 		{
 			continue;
 		}
@@ -50,4 +51,33 @@ void SvmClassifier::Classify(Mat &frame, vector<Rect> &roiList)
 			_resultROI.push_back(Rect(resultList[j].x + roiList[i].x, resultList[j].y + roiList[i].y, resultList[j].width, resultList[j].height));
 		}
 	}
+}
+void SvmClassifier::refineROI(vector<Rect> &roiList)
+{	
+	vector<Rect> tempvector;
+	for (int i = 0; i < roiList.size(); i++)
+	{
+		for (int j = 0; j < roiList.size(); j++)
+		{
+			if (i != j&&roiList[i].area() != 0 && roiList[j].area() != 0)
+			{
+				Rect intersection = roiList[i] & roiList[j];
+				float tempArea = roiList[i].area();
+				float intersectionArea = intersection.area();
+				if (intersectionArea / tempArea>0.6)
+				{
+					roiList[i] = roiList[i] | roiList[j];
+					roiList[j] = Rect(0, 0, 0, 0);
+				}
+			}
+		}
+	}	
+	for (int i = 0; i < roiList.size(); i++)
+	{			
+		if (roiList[i].area() != 0)
+		{
+			tempvector.push_back(roiList[i]);
+		}		
+	}	
+	roiList = tempvector;
 }

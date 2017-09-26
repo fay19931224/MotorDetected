@@ -81,6 +81,7 @@ ObjManager::~ObjManager()
 */
 bool ObjManager::update(cv::Mat &frame, std::vector<cv::Rect> &obj)
 {
+	//對先前物件做tracking
 	for (int i = 0; i < trackingObjs.size(); i++)
 	{
 		trackingObjs[i]->isNewDetection = false;
