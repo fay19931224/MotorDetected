@@ -11,10 +11,10 @@
 */
 SvmClassifier::SvmClassifier(string featureName, ClassiferType type, Scalar rectangleColor, Size windowSize, float threshold) : Classifier(type, rectangleColor, threshold), WINDOW_SIZE(windowSize)
 {
-	_svm.load(featureName.c_str());
+	//_svm.load(featureName.c_str());
 	_descriptor = HOGDescriptor(windowSize, Size(CELL_SIZE.width * 2, CELL_SIZE.height * 2), CELL_SIZE, CELL_SIZE, 9);
 	vector<float> hogVector;
-	_svm.getSupportVector(hogVector);
+	//_svm.getSupportVector(hogVector);
 	_descriptor.setSVMDetector(hogVector);
 }
 
@@ -50,7 +50,7 @@ void SvmClassifier::Classify(Mat &frame, vector<Rect> &roiList)
 		{
 			_resultROI.push_back(Rect(resultList[j].x + roiList[i].x, resultList[j].y + roiList[i].y, resultList[j].width, resultList[j].height));
 		}
-	}
+	}	
 }
 void SvmClassifier::refineROI(vector<Rect> &roiList)
 {	

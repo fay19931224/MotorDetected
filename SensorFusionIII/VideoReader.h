@@ -10,7 +10,9 @@
 #include <opencv2\imgproc\imgproc.hpp>
 
 using namespace std;
-using namespace cv;
+using cv::VideoCapture;
+using cv::Mat;
+using cv::Size;
 
 class VideoReader
 {

@@ -14,6 +14,10 @@
 */
 using cv::Rect;
 using cv::Mat;
+using cv::waitKey;
+using cv::VideoWriter;
+using cv::Vec3f;
+using cv::destroyAllWindows;
 class OfflineMode : public Mode 
 {
 private:
