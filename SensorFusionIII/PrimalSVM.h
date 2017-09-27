@@ -7,6 +7,10 @@
 #include <opencv2\core\core.hpp>
 #include <opencv2\imgproc\imgproc.hpp>
 
+using cv::Scalar;
+using cv::Mat;
+using cv::Rect;
+
 class PrimalSVM : public cv::SVM
 {
 public:

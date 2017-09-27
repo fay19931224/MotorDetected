@@ -8,7 +8,13 @@
 #include <vector>
 #include "ClassifierType.h"
 
-using namespace cv;
+using cv::FONT_HERSHEY_COMPLEX;
+using cv::Mat;
+using cv::Rect;
+using cv::Scalar;
+using cv::Size;
+using cv::getTextSize;
+using cv::Point;
 using namespace std;
 
 /*!

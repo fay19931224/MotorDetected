@@ -5,9 +5,16 @@
 #include "Urg_driver.h"
 #include "Connection_information.h"
 #include "math_utilities.h"
+#include "FusionManager.h"
+#include "SvmClassifier.h"
+#include <time.h>
 
 using namespace qrk;
-
+using cv::Mat;
+using cv::Rect;
+using cv::VideoCapture;
+using cv::waitKey;
+using cv::destroyAllWindows;
 class OnlineMode : public Mode
 {
 private:

@@ -10,7 +10,9 @@
 #include "ObjManager.h"
 #include "FusionManager.h"
 
-using namespace cv;
+using cv::Scalar;
+using cv::Mat;
+using cv::Rect;
 using namespace std;
 
 /*!

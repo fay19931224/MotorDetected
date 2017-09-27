@@ -7,9 +7,24 @@
 #include "Urg_driver.h"
 #include "Connection_information.h"
 #include "math_utilities.h"
+#include <opencv2\opencv.hpp>
+#include <opencv2\highgui\highgui.hpp>
+#include <opencv2\core\core.hpp>
+#include <opencv2\imgproc\imgproc.hpp>
+#include <time.h>
+#include <chrono>
+#include <iomanip>
+#include <sstream>
 
 using namespace qrk;
 using namespace std;
+using namespace std::chrono;
+using cv::Size;
+using cv::VideoCapture;
+using cv::VideoWriter;
+using cv::Mat;
+using cv::waitKey;
+using cv::destroyAllWindows;
 
 
 /*!

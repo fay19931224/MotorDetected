@@ -7,6 +7,12 @@
 /*!
 * 此class用來設定分類器的HOG的CELLSIZE以及初始化SVM分類器，並提供分類的方法。
 */
+
+using cv::Scalar;
+using cv::Mat;
+using cv::Rect;
+using cv::Size;
+using cv::HOGDescriptor;
 class SvmClassifier : public Classifier
 {
 private:

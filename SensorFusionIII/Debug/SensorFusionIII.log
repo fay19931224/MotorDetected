@@ -1,0 +1,44 @@
+﻿已經開始建置於 2017/9/27 下午 04:29:57。
+     1>節點 2 (Build 目標) 上的專案 "C:\Users\fay\Documents\MotorDetected\SensorFusionIII\SensorFusionIII.vcxproj"。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/include/ /IC:\Users\fay\Documents\MotorDetected\\SensorFusionIII\LidarLibrary\Include /ZI /nologo /W3 /WX- /Od /Oy- /D HAS_OPENCV /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Classifier.cpp ClassifierTestingMode.cpp DataReader.cpp FusionManager.cpp Mode.cpp ObjManager.cpp OfflineMode.cpp OnlineMode.cpp RecordMode.cpp SvmClassifier.cpp VideoReader.cpp fhog.cpp kcftracker.cpp main.cpp
+         Classifier.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\classifier.cpp(28): warning C4018: '<' : signed/unsigned 不相符
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\classifier.cpp(37): warning C4018: '<' : signed/unsigned 不相符
+         正在產生程式碼...
+         正在略過... (未偵測到相關變更)
+         main.cpp
+         kcftracker.cpp
+         fhog.cpp
+         VideoReader.cpp
+         SvmClassifier.cpp
+         RecordMode.cpp
+         OnlineMode.cpp
+         OfflineMode.cpp
+         ObjManager.cpp
+         Mode.cpp
+         FusionManager.cpp
+         DataReader.cpp
+         ClassifierTestingMode.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\fay\Documents\MotorDetected\Debug\SensorFusionIII.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\fay\Documents\MotorDetected\\SensorFusionIII\LidarLibrary\Debug C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_videostab2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_video2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_ts2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_superres2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_stitching2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_photo2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_ocl2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_objdetect2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_nonfree2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_ml2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_legacy2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_imgproc2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_highgui2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_gpu2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_flann2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_features2d2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_core2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_contrib2411d.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Debug/opencv_calib3d2411d.lib urg.lib urg_cpp.lib ws2_32.lib setupapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\fay\Documents\MotorDetected\Debug\SensorFusionIII.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\fay\Documents\MotorDetected\Debug\SensorFusionIII.lib" /MACHINE:X86 Debug\Classifier.obj
+         Debug\ClassifierTestingMode.obj
+         Debug\Connection_information.obj
+         Debug\DataReader.obj
+         Debug\fhog.obj
+         Debug\FusionManager.obj
+         Debug\kcftracker.obj
+         Debug\main.obj
+         Debug\Mode.obj
+         Debug\ObjManager.obj
+         Debug\OfflineMode.obj
+         Debug\OnlineMode.obj
+         Debug\RecordMode.obj
+         Debug\SvmClassifier.obj
+         Debug\VideoReader.obj
+     1>LINK : fatal error LNK1104: 無法開啟檔案 'urg.lib'
+     1>專案 "C:\Users\fay\Documents\MotorDetected\SensorFusionIII\SensorFusionIII.vcxproj" (Build 目標) 建置完成 -- 失敗。
+
+建置失敗。
+
+經過時間 00:00:03.10

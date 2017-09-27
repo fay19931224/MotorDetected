@@ -1,7 +1,5 @@
 #include "OnlineMode.h"
-#include "FusionManager.h"
-#include "SvmClassifier.h"
-#include <time.h>
+
 
 OnlineMode::OnlineMode(FusionType type)
 {

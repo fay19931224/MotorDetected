@@ -1,10 +1,4 @@
 #include "OfflineMode.h"
-#include "DataReader.h"
-#include "FusionManager.h"
-#include "Classifier.h"
-#include "SvmClassifier.h"
-#include <Windows.h>
-#include <time.h>
 
 /*!
 * 取得影像，雷達名稱以及fusion的類型
