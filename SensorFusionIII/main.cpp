@@ -1,6 +1,4 @@
-#include "RecordMode.h"
 #include "OfflineMode.h"
-#include "OnlineMode.h"
 #include "ClassifierTestingMode.h"
 #include <Windows.h>
 #include <time.h>
@@ -17,8 +15,11 @@ int main()
 			break;
 		}
 		else if (currentModelType == 1)
-		{			
-			mode = new OfflineMode("Test Video\\0823_motorside3.mp4", FusionType::CarFront, currentModelType);
+		{	
+			//string path = "Test Video\\0817_motorside.mp4";
+			string path = "Test Video\\0823_motorside3.mp4";
+			mode = new OfflineMode(path, FusionType::CarFront, currentModelType);
+
 		}
 		/*else if (currentModelType == 2)
 		{

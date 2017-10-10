@@ -81,15 +81,19 @@ ObjManager::~ObjManager()
 */
 bool ObjManager::update(cv::Mat &frame, std::vector<cv::Rect> &obj)
 {
+	/*畫一下*/
+	for (int i = 0; i < obj.size(); i++)
+	{
+		rectangle(frame, obj[i], Scalar(0, 0, 0), 2);
+	}
 	//對先前物件做tracking
-	for (int i = 0; i < trackingObjs.size(); i++)
+	/*for (int i = 0; i < trackingObjs.size(); i++)
 	{
 		trackingObjs[i]->isNewDetection = false;
 		trackingObjs[i]->ObjUpdate(frame);
-	}
-
+	}	
 	for (int i = 0; i < obj.size(); i++)
-	{
+	{			
 		bool match = false;
 		for (int j = 0; j < trackingObjs.size(); j++)
 		{
@@ -188,7 +192,7 @@ bool ObjManager::update(cv::Mat &frame, std::vector<cv::Rect> &obj)
 				}
 			}
 		}
-	}
+	}*/
 	return trackingObjs.size();
 }
 

@@ -10,16 +10,21 @@
 * @param threshold 為float 類型，分類器的門檻值，值越低就越寬鬆，值越高就越嚴格
 */
 SvmClassifier::SvmClassifier(string featureName, ClassiferType type, Scalar rectangleColor, Size windowSize, float threshold) : Classifier(type, rectangleColor, threshold), WINDOW_SIZE(windowSize)
-{
-	//_svm.load(featureName.c_str());
-	_descriptor = HOGDescriptor(windowSize, Size(CELL_SIZE.width * 2, CELL_SIZE.height * 2), CELL_SIZE, CELL_SIZE, 9);
-	vector<float> hogVector;
-	//_svm.getSupportVector(hogVector);
+{			
+	_svm = new PrimalSVM(featureName);
+	Size _winSize = windowSize;
+	Size _blockSize = Size(CELL_SIZE.width * 2, CELL_SIZE.height * 2);
+	Size _blockStride = CELL_SIZE;
+	Size _cellSize = CELL_SIZE;
+	int _nbins = 9;
+	_descriptor = HOGDescriptor(windowSize, Size(CELL_SIZE.width * 2, CELL_SIZE.height * 2), CELL_SIZE, CELL_SIZE, 9, 1, -1, HOGDescriptor::L2Hys, 0.2, false, HOGDescriptor::DEFAULT_NLEVELS,false);		
+	vector<float> hogVector;		
+	_svm->getSupportVector(hogVector);	
 	_descriptor.setSVMDetector(hogVector);
 }
-
 SvmClassifier::~SvmClassifier()
 {
+	
 }
 
 void SvmClassifier::Classify(Mat &frame)
@@ -35,22 +40,37 @@ void SvmClassifier::Classify(Mat &frame)
 */
 void SvmClassifier::Classify(Mat &frame, vector<Rect> &roiList)
 {
-	_resultROI.clear();	
-	refineROI(roiList);	
+	_resultROI.clear();		
+	vector<Rect> resultList;	
 	for (int i = 0; i < roiList.size(); i++)
 	{
-		rectangle(frame, roiList[i], Scalar(255, 0, 255), 5, 8, 0);						
-		if (roiList[i].width < WINDOW_SIZE.width || roiList[i].height < WINDOW_SIZE.height)
+		
+		//cout << i << endl;
+		//rectangle(frame, roiList[i], Scalar(255, 0, 255), 5, 8, 0);						
+		/*if (roiList[i].width < WINDOW_SIZE.width || roiList[i].height < WINDOW_SIZE.height)
 		{
 			continue;
-		}
-		vector<Rect> resultList;
-		_descriptor.detectMultiScale(Mat(frame, roiList[i]), resultList, THRESHOLD, CELL_SIZE);		            
+		}*/
+		
+		////_descriptor.detectMultiScale(Mat(frame, roiList[i]), resultList, THRESHOLD, CELL_SIZE);		     
+		
+		double hit_threshold = THRESHOLD;
+		hit_threshold = 0.5;
+		
+		//_descriptor.detectMultiScale(frame, resultList, hit_threshold, CELL_SIZE, Size(), 1.05, 2);
+		
+		
+		
+		//cout << "_descriptorsize:" << resultList.size() << endl;
+		
 		for (int j = 0; j < resultList.size(); j++)
 		{
 			_resultROI.push_back(Rect(resultList[j].x + roiList[i].x, resultList[j].y + roiList[i].y, resultList[j].width, resultList[j].height));
 		}
-	}	
+		//cout << "_resultROI:" << _resultROI.size() << endl;
+		resultList.clear();
+	}		
+	
 }
 void SvmClassifier::refineROI(vector<Rect> &roiList)
 {	
@@ -62,8 +82,8 @@ void SvmClassifier::refineROI(vector<Rect> &roiList)
 			if (i != j&&roiList[i].area() != 0 && roiList[j].area() != 0)
 			{
 				Rect intersection = roiList[i] & roiList[j];
-				float tempArea = roiList[i].area();
-				float intersectionArea = intersection.area();
+				float tempArea = static_cast<float>(roiList[i].area());
+				float intersectionArea = static_cast<float>(intersection.area());
 				if (intersectionArea / tempArea>0.6)
 				{
 					roiList[i] = roiList[i] | roiList[j];

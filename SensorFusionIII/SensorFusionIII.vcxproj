@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\OpenCV.2.4.11\build\native\OpenCV.props" Condition="Exists('..\packages\OpenCV.2.4.11\build\native\OpenCV.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -163,7 +162,6 @@
   <ItemGroup>
     <ClCompile Include="Classifier.cpp" />
     <ClCompile Include="ClassifierTestingMode.cpp" />
-    <ClCompile Include="Connection_information.cpp" />
     <ClCompile Include="DataReader.cpp" />
     <ClCompile Include="fhog.cpp" />
     <ClCompile Include="FusionManager.cpp" />
@@ -172,8 +170,7 @@
     <ClCompile Include="Mode.cpp" />
     <ClCompile Include="ObjManager.cpp" />
     <ClCompile Include="OfflineMode.cpp" />
-    <ClCompile Include="OnlineMode.cpp" />
-    <ClCompile Include="RecordMode.cpp" />
+    <ClCompile Include="PrimalSVM.cpp" />
     <ClCompile Include="SvmClassifier.cpp" />
     <ClCompile Include="VideoReader.cpp" />
   </ItemGroup>
@@ -181,7 +178,6 @@
     <ClInclude Include="ClassifierTestingMode.h" />
     <ClInclude Include="ClassifierType.h" />
     <ClInclude Include="Classifier.h" />
-    <ClInclude Include="Connection_information.h" />
     <ClInclude Include="DataReader.h" />
     <ClInclude Include="ffttools.hpp" />
     <ClInclude Include="fhog.hpp" />
@@ -191,19 +187,12 @@
     <ClInclude Include="Mode.h" />
     <ClInclude Include="ObjManager.h" />
     <ClInclude Include="OfflineMode.h" />
-    <ClInclude Include="OnlineMode.h" />
-    <ClInclude Include="RecordMode.h" />
     <ClInclude Include="recttools.hpp" />
     <ClInclude Include="SvmClassifier.h" />
     <ClInclude Include="PrimalSVM.h" />
     <ClInclude Include="tracker.h" />
     <ClInclude Include="VideoReader.h" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\OpenCV.2.4.11\build\native\OpenCV.targets" Condition="Exists('..\packages\OpenCV.2.4.11\build\native\OpenCV.targets')" />
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>

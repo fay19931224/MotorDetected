@@ -1,47 +1,38 @@
-﻿已經開始建置於 2017/9/27 下午 09:36:32。
+﻿已經開始建置於 2017/9/27 下午 09:40:09。
      1>節點 2 (Build 目標) 上的專案 "C:\Users\fay\Documents\MotorDetected\SensorFusionIII\SensorFusionIII.vcxproj"。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/include/ /IC:\Users\fay\Documents\MotorDetected\\SensorFusionIII\LidarLibrary\Include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D HAS_OPENCV /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp OfflineMode.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\fay\Documents\MotorDetected\\SensorFusionIII\LidarLibrary\Include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Classifier.cpp ClassifierTestingMode.cpp Connection_information.cpp DataReader.cpp fhog.cpp FusionManager.cpp kcftracker.cpp main.cpp Mode.cpp ObjManager.cpp OfflineMode.cpp OnlineMode.cpp RecordMode.cpp SvmClassifier.cpp VideoReader.cpp
+         Classifier.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\Classifier.h(4): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         ClassifierTestingMode.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\Classifier.h(4): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         Connection_information.cpp
+         DataReader.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\VideoReader.h(7): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         fhog.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\fhog.hpp(59): fatal error C1083: 無法開啟包含檔案: 'opencv2/imgproc/imgproc_c.h': No such file or directory
+         FusionManager.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\FusionManager.h(4): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         kcftracker.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\tracker.h(21): fatal error C1083: 無法開啟包含檔案: 'opencv2/opencv.hpp': No such file or directory
          main.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\Classifier.h(4): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         Mode.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\Classifier.h(4): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         ObjManager.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\tracker.h(21): fatal error C1083: 無法開啟包含檔案: 'opencv2/opencv.hpp': No such file or directory
          OfflineMode.cpp
-     1>OfflineMode.cpp(19): warning C4305: '引數' : 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-     1>OfflineMode.cpp(20): warning C4305: '引數' : 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-     1>OfflineMode.cpp(94): warning C4018: '<' : signed/unsigned 不相符
-     1>OfflineMode.cpp(97): warning C4018: '<' : signed/unsigned 不相符
-     1>OfflineMode.cpp(158): warning C4018: '<' : signed/unsigned 不相符
-     1>OfflineMode.cpp(162): warning C4244: '正在初始化' : 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
-     1>OfflineMode.cpp(177): warning C4244: '=' : 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\fay\Documents\MotorDetected\Release\SensorFusionIII.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Users\fay\Documents\MotorDetected\\SensorFusionIII\LidarLibrary\Release C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_videostab2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_video2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_ts2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_superres2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_stitching2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_photo2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_ocl2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_objdetect2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_nonfree2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_ml2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_legacy2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_imgproc2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_highgui2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_gpu2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_flann2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_features2d2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_core2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_contrib2411.lib C:\Users\fay\Documents\MotorDetected\packages\OpenCV.2.4.11\build\native\../../build/native/lib/Win32/v120/Release/opencv_calib3d2411.lib urg.lib urg_cpp.lib ws2_32.lib setupapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\fay\Documents\MotorDetected\Release\SensorFusionIII.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\fay\Documents\MotorDetected\Release\SensorFusionIII.lib" /MACHINE:X86 /SAFESEH Release\Classifier.obj
-         Release\ClassifierTestingMode.obj
-         Release\Connection_information.obj
-         Release\DataReader.obj
-         Release\fhog.obj
-         Release\FusionManager.obj
-         Release\kcftracker.obj
-         Release\main.obj
-         Release\Mode.obj
-         Release\ObjManager.obj
-         Release\OfflineMode.obj
-         Release\OnlineMode.obj
-         Release\RecordMode.obj
-         Release\SvmClassifier.obj
-         Release\VideoReader.obj
-         正在產生程式碼
-         已完成程式碼產生
-     1>urg_cpp.lib(Urg_driver.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(Urg_driver.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(urg_sensor.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(urg_sensor.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(urg_serial_utils.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(urg_serial_utils.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(urg_utils.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(urg_utils.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(urg_debug.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(urg_debug.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(ticks.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(ticks.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(urg_connection.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(urg_connection.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(urg_tcpclient.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(urg_tcpclient.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(urg_serial.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(urg_serial.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-     1>urg_cpp.lib(urg_ring_buffer.obj) : warning LNK4099: 找不到 PDB 'vc120.pdb' (有 'urg_cpp.lib(urg_ring_buffer.obj)' 或位於 'C:\Users\fay\Documents\MotorDetected\Release\vc120.pdb')，當做沒有偵錯資訊，連結物件
-         SensorFusionIII.vcxproj -> C:\Users\fay\Documents\MotorDetected\Release\SensorFusionIII.exe
-     1>專案 "C:\Users\fay\Documents\MotorDetected\SensorFusionIII\SensorFusionIII.vcxproj" (Build 目標) 建置完成。
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\VideoReader.h(7): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         OnlineMode.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\Classifier.h(4): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         RecordMode.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\Classifier.h(4): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         SvmClassifier.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\Classifier.h(4): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+         VideoReader.cpp
+     1>c:\users\fay\documents\motordetected\sensorfusioniii\VideoReader.h(7): fatal error C1083: 無法開啟包含檔案: 'opencv2\opencv.hpp': No such file or directory
+     1>專案 "C:\Users\fay\Documents\MotorDetected\SensorFusionIII\SensorFusionIII.vcxproj" (Build 目標) 建置完成 -- 失敗。
 
-建置成功。
+建置失敗。
 
-經過時間 00:00:03.28
+經過時間 00:00:01.09

@@ -42,9 +42,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Connection_information.cpp">
-      <Filter>Source Files\Sensors</Filter>
-    </ClCompile>
     <ClCompile Include="DataReader.cpp">
       <Filter>Source Files\Sensors</Filter>
     </ClCompile>
@@ -72,23 +69,17 @@
     <ClCompile Include="OfflineMode.cpp">
       <Filter>Source Files\Mode</Filter>
     </ClCompile>
-    <ClCompile Include="OnlineMode.cpp">
-      <Filter>Source Files\Mode</Filter>
-    </ClCompile>
-    <ClCompile Include="RecordMode.cpp">
-      <Filter>Source Files\Mode</Filter>
-    </ClCompile>
     <ClCompile Include="ClassifierTestingMode.cpp">
       <Filter>Source Files\Mode</Filter>
     </ClCompile>
     <ClCompile Include="VideoReader.cpp">
       <Filter>Source Files\Sensors</Filter>
     </ClCompile>
+    <ClCompile Include="PrimalSVM.cpp">
+      <Filter>Source Files\Classifiers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Connection_information.h">
-      <Filter>Header Files\Sensors</Filter>
-    </ClInclude>
     <ClInclude Include="DataReader.h">
       <Filter>Header Files\Sensors</Filter>
     </ClInclude>
@@ -134,20 +125,11 @@
     <ClInclude Include="OfflineMode.h">
       <Filter>Header Files\Mode</Filter>
     </ClInclude>
-    <ClInclude Include="OnlineMode.h">
-      <Filter>Header Files\Mode</Filter>
-    </ClInclude>
-    <ClInclude Include="RecordMode.h">
-      <Filter>Header Files\Mode</Filter>
-    </ClInclude>
     <ClInclude Include="ClassifierTestingMode.h">
       <Filter>Header Files\Mode</Filter>
     </ClInclude>
     <ClInclude Include="VideoReader.h">
       <Filter>Header Files\Sensors</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

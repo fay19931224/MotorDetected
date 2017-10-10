@@ -71,7 +71,7 @@ vector<Classifier::RestROI*> Classifier::getRestROI()
 bool Classifier::Update(Mat &frame)
 {
 	bool track  = _tracker.update(frame, _resultROI);
-	_tracker.draw(frame, _rectangleColor);
+	//_tracker.draw(frame, _rectangleColor);
 	return track;
 }
 

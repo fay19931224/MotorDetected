@@ -1,16 +1,7 @@
-﻿已經開始建置於 2017/9/27 下午 09:34:58。
+﻿已經開始建置於 2017/10/10 下午 04:51:40。
      1>節點 2 (Build 目標) 上的專案 "C:\Users\fay\Documents\MotorDetected\SensorFusionIII\SensorFusionIII.vcxproj"。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\fay\Documents\MotorDetected\\SensorFusionIII\LidarLibrary\Include /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt main.cpp OfflineMode.cpp
-         main.cpp
-     1>C:\opencv\build\include\opencv2/core/mat.hpp(2586): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-     1>C:\opencv\build\include\opencv2/core/persistence.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-     1>C:\opencv\build\include\opencv2/core/utility.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-     1>c:\opencv\build\include\opencv2\flann\dist.h : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-     1>C:\opencv\build\include\opencv2/imgproc.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-     1>C:\opencv\build\include\opencv2/imgproc.hpp(592): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-     1>C:\opencv\build\include\opencv2/stitching/detail/motion_estimators.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-     1>C:\opencv\build\include\opencv2/video/tracking.hpp(532): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\fay\Documents\MotorDetected\\SensorFusionIII\LidarLibrary\Include /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt OfflineMode.cpp
          OfflineMode.cpp
      1>C:\opencv\build\include\opencv2/core/mat.hpp(2586): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
      1>C:\opencv\build\include\opencv2/core/persistence.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
@@ -22,32 +13,25 @@
      1>C:\opencv\build\include\opencv2/imgproc.hpp(592): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
      1>C:\opencv\build\include\opencv2/stitching/detail/motion_estimators.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
      1>C:\opencv\build\include\opencv2/video/tracking.hpp(532): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-     1>OfflineMode.cpp(19): warning C4305: '引數' : 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-     1>OfflineMode.cpp(20): warning C4305: '引數' : 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-     1>OfflineMode.cpp(151): error C2065: 'Vec3f' : 未宣告的識別項
-     1>OfflineMode.cpp(151): error C2923: 'std::vector' : 對參數 '_Ty' 而言，'Vec3f' 不是有效的 樣板 類型引數
-     1>OfflineMode.cpp(151): error C2133: 'circles' : 未知的大小
-     1>OfflineMode.cpp(151): error C2512: 'std::vector' : 沒有適當的預設建構函式
-     1>OfflineMode.cpp(157): error C2664: 'void cv::HoughCircles(cv::InputArray,cv::OutputArray,int,double,double,double,double,int,int)' : 無法將引數 2 從 'std::vector' 轉換為 'cv::OutputArray'
-                 原因: 無法從 'std::vector'轉換為 'const cv::_OutputArray'
-                 沒有可以執行此轉換的使用者定義轉換運算子或無法呼叫運算子
-     1>OfflineMode.cpp(158): error C2662: '_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::size_type std::vector<_Ty,_Alloc>::size(void) throw() const' : 無法將 'this' 指標從 'std::vector' 轉換成 'const std::vector<_Ty,_Alloc> &'
-                 原因: 無法從 'std::vector'轉換為 'const std::vector<_Ty,_Alloc>'
-                 轉換必須有第二個使用者定義轉換運算子或建構函式
-     1>OfflineMode.cpp(160): error C2678: 二元運算子 '[' : 找不到使用左方運算元類型 'std::vector' 的運算子 (或是沒有可接受的轉換)
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vector(1196): 可能是 '_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::reference std::vector<_Ty,_Alloc>::operator [](_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::size_type)'
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vector(1180): 或       '_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::const_reference std::vector<_Ty,_Alloc>::operator [](_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::size_type) const'
-                 當嘗試符合引數清單 '(std::vector, int)' 時
-     1>OfflineMode.cpp(160): error C2088: '[' : class 不合法
-     1>OfflineMode.cpp(161): error C2678: 二元運算子 '[' : 找不到使用左方運算元類型 'std::vector' 的運算子 (或是沒有可接受的轉換)
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vector(1196): 可能是 '_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::reference std::vector<_Ty,_Alloc>::operator [](_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::size_type)'
-                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vector(1180): 或       '_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::const_reference std::vector<_Ty,_Alloc>::operator [](_Vector_alloc<!std::is_empty<_Alloc_types::_Alloc>::value,std::_Vec_base_types<_Ty,_Alloc_types::_Alloc>>::size_type) const'
-                 當嘗試符合引數清單 '(std::vector, int)' 時
-     1>OfflineMode.cpp(162): warning C4244: '正在初始化' : 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
-     1>OfflineMode.cpp(177): warning C4244: '=' : 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
-     1>OfflineMode.cpp(204): error C3861: 'destroyAllWindows': 找不到識別項
-     1>專案 "C:\Users\fay\Documents\MotorDetected\SensorFusionIII\SensorFusionIII.vcxproj" (Build 目標) 建置完成 -- 失敗。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\fay\Documents\MotorDetected\x64\Release\SensorFusionIII.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Users\fay\Documents\MotorDetected\\SensorFusionIII\LidarLibrary\Release urg.lib urg_cpp.lib ws2_32.lib setupapi.lib opencv_world320.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\fay\Documents\MotorDetected\x64\Release\SensorFusionIII.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\fay\Documents\MotorDetected\x64\Release\SensorFusionIII.lib" /MACHINE:X64 x64\Release\Classifier.obj
+         x64\Release\ClassifierTestingMode.obj
+         x64\Release\DataReader.obj
+         x64\Release\fhog.obj
+         x64\Release\FusionManager.obj
+         x64\Release\kcftracker.obj
+         x64\Release\main.obj
+         x64\Release\Mode.obj
+         x64\Release\ObjManager.obj
+         x64\Release\OfflineMode.obj
+         x64\Release\PrimalSVM.obj
+         x64\Release\SvmClassifier.obj
+         x64\Release\VideoReader.obj
+         正在產生程式碼
+         已完成程式碼產生
+         SensorFusionIII.vcxproj -> C:\Users\fay\Documents\MotorDetected\x64\Release\SensorFusionIII.exe
+     1>專案 "C:\Users\fay\Documents\MotorDetected\SensorFusionIII\SensorFusionIII.vcxproj" (Build 目標) 建置完成。
 
-建置失敗。
+建置成功。
 
-經過時間 00:00:02.06
+經過時間 00:00:06.55
